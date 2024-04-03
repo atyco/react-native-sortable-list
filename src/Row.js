@@ -1,5 +1,5 @@
 import React, {Component, cloneElement} from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'deprecated-react-native-prop-types';
 import {Animated, PanResponder, StyleSheet} from 'react-native';
 import {shallowEqual} from './utils';
 

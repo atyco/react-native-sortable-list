@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import PropTypes from 'deprecated-react-native-prop-types';
+import * as PropTypes from 'deprecated-react-native-prop-types';
 import {ScrollView, View, StyleSheet, Platform, RefreshControl} from 'react-native';
 import {shallowEqual, swapArrayElements} from './utils';
 import Row from './Row';

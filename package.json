@@ -1,6 +1,6 @@
 {
   "name": "@atycompany/react-native-sortable-list",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Native Sortable List component",
   "main": "index.js",
   "repository": {

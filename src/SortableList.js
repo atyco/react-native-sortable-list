@@ -212,6 +212,7 @@ export default class SortableList extends Component {
     let {
       contentContainerStyle,
       innerContainerStyle,
+      listContainerStyle,
       horizontal,
       style,
       showsVerticalScrollIndicator,
@@ -242,6 +243,7 @@ export default class SortableList extends Component {
     return (
       <View style={containerStyle} ref={this._onRefContainer}>
         <ScrollView
+          style={listContainerStyle ? listContainerStyle : {}}
           nestedScrollEnabled={nestedScrollEnabled}
           disableIntervalMomentum={disableIntervalMomentum}
           refreshControl={refreshControl}

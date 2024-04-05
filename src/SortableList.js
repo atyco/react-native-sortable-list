@@ -141,8 +141,10 @@ export default class SortableList extends Component {
         });
       } else {
         this.setState({
+          animated: false,
           data: nextData,
-          order: nextOrder
+          order: nextOrder,
+          rowsLayouts: null,
         });
       }
 

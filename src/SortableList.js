@@ -40,8 +40,10 @@ export default class SortableList extends Component {
     pagingEnabled: PropTypes.bool,
     nestedScrollEnabled: PropTypes.bool,
     disableIntervalMomentum: PropTypes.bool,
+    moreScrollViewProps: PropTypes.object,
 
     renderRow: PropTypes.func.isRequired,
+    renderRowStyle: STYLE_TYPE,
     renderHeader: PropTypes.func,
     renderFooter: PropTypes.func,
 
@@ -234,8 +236,8 @@ export default class SortableList extends Component {
       horizontal ? {width: contentWidth} : {height: contentHeight},
       innerContainerStyle
     ];
+    const moreScrollViewProps = this.props.moreScrollViewProps || {};
     let {refreshControl} = this.props;
-
     if (refreshControl && refreshControl.type === RefreshControl) {
       refreshControl = React.cloneElement(this.props.refreshControl, {
         enabled: scrollEnabled, // fix for Android
@@ -261,6 +263,7 @@ export default class SortableList extends Component {
           showsVerticalScrollIndicator={showsVerticalScrollIndicator}
           snapToAlignment={snapToAlignment}
           onScroll={this._onScroll}
+          {...moreScrollViewProps}
         >
           {this._renderHeader()}
           <View style={innerContainerStyle}>

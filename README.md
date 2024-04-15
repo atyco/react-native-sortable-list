@@ -46,6 +46,7 @@ Determines when the keyboard should stay visible after a tap.
 - **rowActivationTime?** (number) determines time delay in ms before pressed row becomes active. Defaults to 200 ms.<br />
 - **refreshControl?** (element)<br />
 A RefreshControl that works the same way as a ScrollView's refreshControl.
+- **moreScrollViewProps?** (Object) additional props for the ScrollView component.
 - **renderRow** (function)<br />
 `({key, index, data, disabled, active}) => renderable`<br />
 Takes a row key, row index, data entry from the data source and its statuses disabled, active and should return a renderable component to be rendered as the row. The child component will receive a method called `toggleRowActive` (only if `manuallyActivateRows={true}`) to manually activate the row. Useful if you have multiple touch responders in your view.<br />

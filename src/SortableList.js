@@ -273,7 +273,7 @@ export default class SortableList extends Component {
   }
 
   _renderRows() {
-    const {horizontal, rowActivationTime, sortingEnabled, renderRow} = this.props;
+    const {horizontal, rowActivationTime, sortingEnabled, renderRow, renderRowStyle} = this.props;
     const {animated, order, data, activeRowKey, releasedRowKey, rowsLayouts} = this.state;
 
 
@@ -281,7 +281,7 @@ export default class SortableList extends Component {
     let nextY = 0;
 
     return order.map((key, index) => {
-      const style = {[ZINDEX]: 0};
+      const style = renderRowStyle ? {...renderRowStyle, [ZINDEX]: 0} : {[ZINDEX]: 0};
       const location = {x: 0, y: 0};
 
       if (rowsLayouts) {

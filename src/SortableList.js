@@ -115,7 +115,9 @@ export default class SortableList extends Component {
 
     this._onUpdateLayouts();
 
-    this.setState({ isMounting: false });
+    setTimeout(() => {
+      this.setState({ isMounting: false });
+    }, 0);
   }
 
   componentDidUpdate(prevProps, prevState) {
